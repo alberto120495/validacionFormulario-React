@@ -68,6 +68,8 @@ export default function App() {
       setCorreo({ campo: "", valido: null });
       setTelefono({ campo: "", valido: null });
       setTerminos(false);
+
+      // ...
     } else {
       setFormValido(false);
     }
@@ -164,7 +166,9 @@ export default function App() {
 
         <ContenedorBoton>
           <Boton type="submit">Enviar</Boton>
-          <MensajeExito>Formulario enviado correctamente</MensajeExito>
+          {FormValido === true && (
+            <MensajeExito>Formulario enviado correctamente</MensajeExito>
+          )}
         </ContenedorBoton>
       </Formulario>
     </main>
